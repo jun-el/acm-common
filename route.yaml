@@ -1,12 +1,10 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: fhaa-app
+  name: fhaa-rt
   namespace: fhaa
   labels:
     app: fhaa-app
-    app.kubernetes.io/component: fhaa-app
-    app.kubernetes.io/instance: fhaa-app
 spec:
   to:
     kind: Service
@@ -15,6 +13,6 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: ''
     destinationCACertificate: ''
-  host: fhaa.apps.ocp0.reca1.com
+  host: fhaa-test.apps.ocp0.reca1.com
   port:
     targetPort: 8080-tcp
