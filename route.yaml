@@ -1,0 +1,29 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: fhaa-app
+  namespace: fhaa
+  labels:
+    app: fhaa-app
+    app.kubernetes.io/component: fhaa-app
+    app.kubernetes.io/instance: fhaa-app
+  managedFields:
+    - manager: openshift-router
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:ingress': {}
+      subresource: status
+spec:
+  host: fhaa.apps.ocp0.reca1.com
+  to:
+    kind: Service
+    name: fhaa-app
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+  wildcardPolicy: None
