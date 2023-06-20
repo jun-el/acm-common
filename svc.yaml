@@ -5,8 +5,6 @@ metadata:
   namespace: fhaa
   labels:
     app: fhaa-app
-    app.kubernetes.io/component: fhaa-app
-    app.kubernetes.io/instance: fhaa-app
 spec:
   selector:
     deployment: fhaa-app
