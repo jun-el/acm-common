@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fhaa-app
+  name: fhaa-svc
   namespace: fhaa
   labels:
     app: fhaa-app
