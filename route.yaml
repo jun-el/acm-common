@@ -13,6 +13,6 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: ''
     destinationCACertificate: ''
-  host: fhaa.apps.ocp0.reca1.com
+  host: fhaa.reca1.com
   port:
     targetPort: 8080-tcp
