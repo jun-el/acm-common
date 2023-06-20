@@ -11,8 +11,6 @@ metadata:
   namespace: fhaa
   labels:
     app: fhaa-app
-    app.kubernetes.io/component: fhaa-app
-    app.kubernetes.io/instance: fhaa-app
 spec:
   replicas: 1
   selector:
@@ -20,16 +18,13 @@ spec:
       deployment: fhaa-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         deployment: fhaa-app
-      annotations:
-        openshift.io/generated-by: OpenShiftNewApp
     spec:
       containers:
         - name: fhaa-app
           image: >-
-            image-registry.openshift-image-registry.svc:5000/fhaa/fhaa-app@sha256:3c43969a1f41300144f59505c8c69fc8cf5ee5eda5a229bc13dce0b30ef42eb7
+            image-registry.openshift-image-registry.svc:5000/fhaa/fhaa-app
           ports:
             - containerPort: 8080
               protocol: TCP
