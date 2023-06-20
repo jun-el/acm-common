@@ -4,6 +4,7 @@ metadata:
   labels:
     app: fhaa-app
   name: fhaa-app
+  namespace: fhaa
 spec:
   failedBuildsHistoryLimit: 5
   nodeSelector: null
