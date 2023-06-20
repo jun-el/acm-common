@@ -2,12 +2,10 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: '7'
     image.openshift.io/triggers: >-
       [{"from":{"kind":"ImageStreamTag","name":"fhaa-app:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"fhaa-app\")].image"}]
     openshift.io/generated-by: OpenShiftNewApp
   name: fhaa-app
-  generation: 7
   namespace: fhaa
   labels:
     app: fhaa-app
