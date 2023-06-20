@@ -8,7 +8,7 @@ metadata:
 spec:
   to:
     kind: Service
-    name: fhaa-app
+    name: fhaa-svc
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: ''
