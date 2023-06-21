@@ -4,12 +4,9 @@ metadata:
   annotations:
   labels:
     app: fhaa-app
-  name: fhaa-svc
+  name: fhaa-svc-vsphere
   namespace: fhaa
 spec:
-  # clusterIP: 172.30.61.181
-  # clusterIPs:
-  # - 172.30.61.181
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4
@@ -23,3 +20,27 @@ spec:
     deployment: fhaa-app
   sessionAffinity: None
   type: ClusterIP
+  
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: fhaa-app
+  name: fhaa-svc-aws
+  namespace: fhaa
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deployment: fhaa-app
+  sessionAffinity: None
+  type: ClusterIP
+
