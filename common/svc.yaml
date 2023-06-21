@@ -4,7 +4,7 @@ metadata:
   annotations:
   labels:
     app: fhaa-app
-  name: fhaa-svc-vsphere
+  name: fhaa-svc
   namespace: fhaa
 spec:
   internalTrafficPolicy: Cluster
