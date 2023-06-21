@@ -1,6 +1,6 @@
-# acm-vsphere
+# acm-aws
 RECA#1 파이널 프로젝트  
-vSphere 인프라 환경에 HPA를 구성하는 Manifest.  
+AWS 인프라 환경에 HPA를 구성하는 Manifest.  
 
 
 ## AWS Worker node 
