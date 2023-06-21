@@ -8,7 +8,26 @@ metadata:
 spec:
   to:
     kind: Service
-    name: fhaa-svc
+    name: fhaa-svc-vsphere
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: ''
+    destinationCACertificate: ''
+  host: fhaa.reca1.com
+  port:
+    targetPort: 8080-tcp
+    
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: fhaa-rt
+  namespace: fhaa
+  labels:
+    app: fhaa-app
+spec:
+  to:
+    kind: Service
+    name: fhaa-svc-aws
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: ''
