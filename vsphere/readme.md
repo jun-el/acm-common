@@ -25,7 +25,5 @@ Mem per pod: 4Gi (Total Mem limit / 6)
 ### HPA 적용값
 Min Pod: 2
 Max Pod: 6
-Min CPU: 2 (CPU per pod * Min Pod)
-Max CPU: 6 (CPU per pod * Max Pod)
-Min Mem: 8Gi (Mem per pod * Min Pod)
-Max Mem: 24Gi (Mem per pod * Max Pod)
+CPU avg: 80
+Mem avg: 80
