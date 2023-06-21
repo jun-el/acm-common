@@ -5,7 +5,7 @@ metadata:
     image.openshift.io/triggers: >-
       [{"from":{"kind":"ImageStreamTag","name":"fhaa-app:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"fhaa-app\")].image"}]
     openshift.io/generated-by: OpenShiftNewApp
-  name: fhaa-app-vpshere
+  name: fhaa-app-vsphere
   namespace: fhaa
   labels:
     app: fhaa-app
