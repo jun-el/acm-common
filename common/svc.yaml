@@ -16,10 +16,6 @@ spec:
     port: 8000
     protocol: TCP
     targetPort: 8000
-  - name: 8080-tcp
-    port: 88
-    protocol: TCP
-    targetPort: 8080
   selector:
     deployment: fhaa-app
   sessionAffinity: None
