@@ -8,3 +8,23 @@ metadata:
 spec:
   lookupPolicy:
     local: false
+
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: load-test
+  namespace: fhaa
+  labels:
+    app: fhaa-app
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    from:
+      kind: DockerImage
+      name: quay.io/redhattraining/hello-world-nginx:v1.0
+    importPolicy:
+      importMode: Legacy
+    name: v1
+    referencePolicy:
+      type: Source
