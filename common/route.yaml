@@ -26,13 +26,12 @@ metadata:
   labels:
     app: fhaa-app
 spec:
+  host: loadtest.apps.ocp0.reca1.com
   to:
     kind: Service
     name: fhaa-svc
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: ''
-    destinationCACertificate: ''
-  host: fhaa.reca1.com
+    weight: 100
   port:
-    targetPort: 8000-tcp
+    targetPort: 8080-tcp
+  wildcardPolicy: None
+  tls: null
