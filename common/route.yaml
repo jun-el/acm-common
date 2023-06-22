@@ -25,10 +25,13 @@ metadata:
   labels:
     app: fhaa-app
 spec:
+  host: fhaa.reca1.com
+  path: /load/
   to:
     kind: Service
     name: fhaa-svc
-  host: fhaa.reca1.com
-  path: /load/
+    weight: 100
   port:
     targetPort: 8080-tcp
+  wildcardPolicy: None
+  tls: null
