@@ -40,6 +40,9 @@ spec:
             - containerPort: 8080
               protocol: TCP
           resources:
+            requests:
+              cpu: '800m'
+              memory: '1Gi'
             limits:
               cpu: '800m'
               memory: '2Gi'
