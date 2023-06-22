@@ -17,8 +17,6 @@ spec:
   port:
     targetPort: 8080-tcp
 
-    
-kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: fhaa-rt-8000
