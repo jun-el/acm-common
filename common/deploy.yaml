@@ -35,7 +35,7 @@ spec:
               memory: '500Mi'
         - name: loadtest
           image: >-
-            quay.io/redhattraining/hello-world-nginx:v1.0
+            quay.io/redhattraining/loadtest:v1.0
           ports:
             - containerPort: 8080
               protocol: TCP
