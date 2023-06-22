@@ -18,6 +18,7 @@ spec:
   source:
     git:
       uri: https://github.com/junyjoy/Fhaha.git
+      ref: loadtest
     type: Git
   strategy:
     sourceStrategy:
