@@ -35,7 +35,7 @@ spec:
               memory: '500Mi'
         - name: loadtest
           image: >-
-            image-registry.openshift-image-registry.svc:5000/fhaa/load-test
+            quay.io/redhattraining/hello-world-nginx:v1.0
           ports:
             - containerPort: 8080
               protocol: TCP
