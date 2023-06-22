@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: fhaa-rt
+  name: fhaa-rt-8080
   namespace: fhaa
   labels:
     app: fhaa-app
@@ -16,3 +16,23 @@ spec:
   host: fhaa.reca1.com
   port:
     targetPort: 8080-tcp
+
+    
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: fhaa-rt-8000
+  namespace: fhaa
+  labels:
+    app: fhaa-app
+spec:
+  to:
+    kind: Service
+    name: fhaa-svc
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: ''
+    destinationCACertificate: ''
+  host: fhaa.reca1.com
+  port:
+    targetPort: 8000-tcp
