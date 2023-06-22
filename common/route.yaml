@@ -14,6 +14,7 @@ spec:
     insecureEdgeTerminationPolicy: ''
     destinationCACertificate: ''
   host: fhaa.reca1.com
+  path: /load/
   port:
     targetPort: 8080-tcp
 ---
