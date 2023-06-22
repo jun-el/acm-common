@@ -31,6 +31,6 @@ spec:
     name: fhaa-svc-loadtest
     weight: 100
   port:
-    targetPort: 8080-tcp
+    targetPort: 8080
   wildcardPolicy: None
   tls: null
