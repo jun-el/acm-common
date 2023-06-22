@@ -25,11 +25,10 @@ metadata:
   labels:
     app: fhaa-app
 spec:
-  host: fhaa.reca1.com
-  path: /load/
+  host: loadtest.reca1.com
   to:
     kind: Service
-    name: fhaa-svc
+    name: fhaa-svc-loadtest
     weight: 100
   port:
     targetPort: 8080-tcp
